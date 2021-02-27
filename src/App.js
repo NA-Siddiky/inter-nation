@@ -11,6 +11,10 @@ function App() {
   const [addedCountry, setAddedCountry] = useState([]);
   // console.log(addedCountry);
 
+  // useEffect(() => {
+  //   fetch()
+  // })
+
   useEffect(() => {
     fetch(url)
       .then(response => response.json())
