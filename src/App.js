@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import Country from './components/Country/Country';
+import Show from './components/Country/Show/Show';
 
 function App() {
   const url = "https://restcountries.eu/rest/v2/all"
@@ -18,7 +19,7 @@ function App() {
   }, [])
 
   const handleAddBtn = (added) => {
-    console.log(added);
+    // console.log(added);
     const afterAdding = [...addedCountry, added]
     setAddedCountry(afterAdding);
   }
@@ -27,7 +28,8 @@ function App() {
     <div className="App">
       <h1>Country Loaded: {countries.length}</h1>
       <h1>Country Added: {addedCountry.length}</h1>
-
+      <Show show ={addedCountry}></Show>
+      {/* console.log(show); */}
       {
         countries.map(countryInfo => <Country countryInfo={countryInfo} handleAddBtn={handleAddBtn} key={countryInfo.alpha3Code}></Country>)
       }
