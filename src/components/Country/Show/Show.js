@@ -13,7 +13,7 @@ const Show = (props) => {
     const totalPopulation = show.reduce((sum, country) => sum + country.population, 0)
     return (
         <div>
-            <h2>Added Country: {show.length}</h2>
+            <h2>Added Countries: {show.length}</h2>
             <p>Total Population: {totalPopulation}</p>
         </div>
     );
