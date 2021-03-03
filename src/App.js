@@ -32,12 +32,11 @@ function App() {
     <div className="App">
       <h1>Country Loaded: {countries.length}</h1>
       <h1>Country Added: {addedCountry.length}</h1>
-      <Show show ={addedCountry}></Show>
+      <Show show={addedCountry}></Show>
       {/* console.log(show); */}
       {
         countries.map(countryInfo => <Country countryInfo={countryInfo} handleAddBtn={handleAddBtn} key={countryInfo.alpha3Code}></Country>)
       }
-
     </div>
   );
 }

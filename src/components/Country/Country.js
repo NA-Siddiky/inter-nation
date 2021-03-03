@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap'
 
 
 const Country = (props) => {
@@ -15,6 +16,7 @@ const Country = (props) => {
             <img style={{ width: '20%' }} src={flag} alt="" />
             <p>Population: {population}</p>
             <p>Region: {region}</p>
+            {/* <Button variant="success">Success</Button>{' '} */}
             <button onClick={() => handleAddBtn(props.countryInfo)}>Add Country</button>
         </div>
     );
